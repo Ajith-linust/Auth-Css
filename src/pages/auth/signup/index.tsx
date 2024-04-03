@@ -38,7 +38,7 @@ const Signup = React.forwardRef<HTMLFormElement>((_, ref) => {
         eyeHandler={() =>
           setPasswordDetails((p) => ({
             ...passwordDetails,
-            showPassword: !p.showConfirmPassword,
+            showConfirmPassword: !p.showConfirmPassword,
           }))
         }
         placeholder="Enter confirm password"

@@ -71,6 +71,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground flex justify-center items-center h-screen;
+    @apply bg-background text-foreground;
   }
+}
+
+.input-boxShadow {
+  background: #f9f9f9;
+  box-shadow: inset 4px 4px 6px #eaeaea, inset -4px -4px 6px #ffffff;
 }

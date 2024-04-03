@@ -5,6 +5,7 @@ This repository is dedicated exclusively to design-related work and does not sup
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
+
 - Node.js and npm installed (https://nodejs.org/)
 
 ## Installing and Running the Project
@@ -24,6 +25,7 @@ npm install
 # Start the development server
 npm run dev
 
-# Route paths are 
-/login, /signup, /
+# Route paths are
+/, /signup, /home
 
+```

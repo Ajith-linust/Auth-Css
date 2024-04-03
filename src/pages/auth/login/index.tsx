@@ -43,7 +43,7 @@ const Login = ({ className }: { className?: string }) => {
 
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!regex.test(email)) return setError("Email is valid.");
+    if (!regex.test(email)) return setError("Email is invalid.");
 
     // Password validation criteria
     const isValidPassword = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/.test(

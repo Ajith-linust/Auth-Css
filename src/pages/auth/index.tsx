@@ -32,7 +32,7 @@ const Auth = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center overflow-hidden">
-      <div className="w-full h-max flex flex-col md:w-[300px] relative overflow-hidden bg-background">
+      <div className="w-full p-4 h-max max-w-[300px] flex flex-col md:w-[300px] relative overflow-hidden bg-background">
         <div className={cn("text-left relative w-full h-full bg-background")}>
           <Signup ref={linerRef} />
           <Login />

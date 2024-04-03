@@ -2,28 +2,33 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface LoginI {
+  given_name: string;
+  family_name: string;
+  nickname: string;
+  name: string;
+  picture: string;
+  locale: string;
+  updated_at: string;
   email: string;
-  password: string;
-}
-
-export interface SignUpI {
-  email: string;
-  password: string;
-  confirmPassword: string;
+  email_verified: boolean;
+  sub: string;
 }
 
 /** Here, We can declare types in many methods but I chose this */
 
 const initialState = {
-  login: {
+  user: {
+    given_name: "",
+    family_name: "",
+    nickname: "",
+    name: "",
+    picture: "",
+    locale: "",
+    updated_at: "",
     email: "",
-    password: "",
-  } as LoginI,
-  signUp: {
-    email: "",
-    password: "",
-    confirmPassword: "",
-  } as SignUpI,
+    email_verified: false,
+    sub: "",
+  },
 };
 
 const authSlice = createSlice({
@@ -33,30 +38,13 @@ const authSlice = createSlice({
     updateLoginDetails(
       state,
       action: PayloadAction<{
-        email?: string;
-        password?: string;
+        user: LoginI;
       }>
     ) {
-      state.login = {
-        ...state.login,
-        ...action.payload,
-      };
-    },
-    updateSignupDetails(
-      state,
-      action: PayloadAction<{
-        email?: string;
-        password?: string;
-        confirmPassword?: string;
-      }>
-    ) {
-      state.signUp = {
-        ...state.signUp,
-        ...action.payload,
-      };
+      state.user = action.payload.user;
     },
   },
 });
 
-export const { updateLoginDetails, updateSignupDetails } = authSlice.actions;
+export const { updateLoginDetails } = authSlice.actions;
 export default authSlice.reducer;

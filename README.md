@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# React + TS + Vite + Reduxjs/toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is dedicated exclusively to design-related work and does not support Auth0 integration. In React, Auth0 (@auth0/@auth0-react) does not support embedded authentication and requires a domain. Therefore, this repository has been created primarily for CSS purposes.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Before you begin, ensure you have met the following requirements:
+- Node.js and npm installed (https://nodejs.org/)
 
-## Expanding the ESLint configuration
+## Installing and Running the Project
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To install and run the project, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+# Clone the repository
+git clone https://github.com/Ajith-linust/Auth-Css.git
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+# Navigate to the project directory
+cd your-project-name
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+# Route paths are 
+/login, /signup, /
+
